@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react"
+  },
+  "include": ["./src/**/*"]
+}

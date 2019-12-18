@@ -4,6 +4,10 @@
   "description": "Toolbox containing various helpers for creating PWA's with React.",
   "main": "src/index.js",
   "scripts": {
+    "build": "tsc",
+    "lint": "npm-run-all lint:*",
+    "lint:ts": "eslint './src/**/*.{ts,tsx}'",
+    "lint:prettier": "prettier --list-different \"src/**/*.ts{,x}\"",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -32,6 +36,8 @@
     "@types/node": "^12.12.20",
     "@types/react": "^16.9.16",
     "@types/workbox-window": "^4.3.3",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-react": "^1.1.7",
