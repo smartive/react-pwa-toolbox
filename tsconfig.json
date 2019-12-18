@@ -1,17 +1,15 @@
 {
   "compilerOptions": {
-    "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true,
     "outDir": "./dist/",
-    "sourceMap": true,
+    "declaration": true,
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "CommonJS",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "target": "es5",
-    "allowJs": true,
+    "allowJs": false,
+    "importHelpers": true,
     "jsx": "react"
   },
   "include": ["./src/**/*"]

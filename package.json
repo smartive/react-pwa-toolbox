@@ -1,14 +1,19 @@
 {
-  "name": "react-pwa-toolbox",
+  "name": "@smartive/react-pwa-toolbox",
   "version": "0.0.0-development",
   "description": "Toolbox containing various helpers for creating PWA's with React.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "tsc",
     "lint": "npm-run-all lint:*",
     "lint:ts": "eslint './src/**/*.{ts,tsx}'",
     "lint:prettier": "prettier --list-different \"src/**/*.ts{,x}\"",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -27,12 +32,14 @@
   },
   "homepage": "https://github.com/smartive/react-pwa-toolbox#readme",
   "dependencies": {
+    "tslib": "^1.10.0",
     "workbox-window": "^4.3.1"
   },
   "peerDependencies": {
     "react": "^16.8.0"
   },
   "devDependencies": {
+    "react": "^16.8.0",
     "@types/node": "^12.12.20",
     "@types/react": "^16.9.16",
     "@types/workbox-window": "^4.3.3",
