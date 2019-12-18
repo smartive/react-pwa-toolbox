@@ -1,0 +1,12 @@
+include:
+  - project: 'smartive/ci-templates'
+    ref: v1.2.2
+    file: '/github/defaults/npm.yml'
+
+variables:
+  REPO: 'smartive/react-pwa-toolbox'
+
+create release:
+  before_script:
+    - npm ci
+    - npm run build
