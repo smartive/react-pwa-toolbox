@@ -1,0 +1,46 @@
+{
+  "name": "react-pwa-toolbox",
+  "version": "0.0.0-development",
+  "description": "Toolbox containing various helpers for creating PWA's with React.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartive/react-pwa-toolbox.git"
+  },
+  "keywords": [
+    "react",
+    "pwa",
+    "workbox",
+    "toolbox"
+  ],
+  "author": "smartive AG <hello@smartive.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartive/react-pwa-toolbox/issues"
+  },
+  "homepage": "https://github.com/smartive/react-pwa-toolbox#readme",
+  "dependencies": {
+    "workbox-window": "^4.3.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.20",
+    "@types/react": "^16.9.16",
+    "@types/workbox-window": "^4.3.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "prettier": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.7.3"
+  }
+}
