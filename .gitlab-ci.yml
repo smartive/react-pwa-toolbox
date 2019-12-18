@@ -1,6 +1,6 @@
 include:
   - project: 'smartive/ci-templates'
-    ref: v1.2.1
+    ref: v1.2.2
     file: '/github/defaults/npm.yml'
 
 variables:
