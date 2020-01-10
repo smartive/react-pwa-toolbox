@@ -21,3 +21,19 @@ const [updateAvailable, installUpdate] = useServiceWorker('service-worker.js');
     />
 )}
 ```
+
+## useNativeBack hook
+
+This React hook allows the handling of a native back event, e.g. from a browser or mobile phone OS, in a single page web app.
+
+The following example demonstrates the usage with an XState-Statemachine. The statemachine transitions will be viewed as route changes and a native back event will be handled by an action sent to the statemachine.
+
+```tsx
+import { useNativeBack } from '@smartive/react-pwa-toolbox';
+import { useMachine } from '@xstate/react';
+
+const [current, send, service] = useMachine(StateMachine);
+
+const routeChanged = useNativeBack(() => send('BACK'));
+service.onTransition((current) => routeChanged(current.value));
+```
