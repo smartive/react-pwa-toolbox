@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { clearInterval } from 'timers';
 import { Workbox } from 'workbox-window';
 
 let workbox: Workbox | null = null;
