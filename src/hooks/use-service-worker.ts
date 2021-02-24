@@ -10,10 +10,8 @@ type Props = {
   periodicUpdateInterval?: number;
 };
 
-export const useServiceWorker = ({
-  scriptUrl = 'service-worker.js',
-  periodicUpdateInterval,
-}: Props): [boolean, () => void | null] => {
+export const useServiceWorker = (props?: Props): [boolean, () => void | null] => {
+  const { scriptUrl = 'service-worker.js', periodicUpdateInterval } = props || {};
   const [isServiceWorkerUpdateAvailable, setServiceWorkerUpdateAvailable] = useState(false);
 
   useEffect(() => {
