@@ -33,7 +33,7 @@
   "homepage": "https://github.com/smartive/react-pwa-toolbox#readme",
   "dependencies": {
     "tslib": "^1.10.0",
-    "workbox-window": "^4.3.1"
+    "workbox-window": "^6.1.1"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0"
@@ -41,7 +41,6 @@
   "devDependencies": {
     "@types/node": "^12.12.20",
     "@types/react": "^16.9.16",
-    "@types/workbox-window": "^4.3.3",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "eslint": "^6.6.0",
