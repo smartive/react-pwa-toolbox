@@ -11,7 +11,6 @@ type Props = {
 };
 
 export const useServiceWorker = (props?: Props): [boolean, () => void | null] => {
-  const { scriptUrl = 'service-worker.js', periodicUpdateInterval } = props || {};
   const [isServiceWorkerUpdateAvailable, setServiceWorkerUpdateAvailable] = useState(false);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export const useServiceWorker = (props?: Props): [boolean, () => void | null] =>
 
     // Inspired by https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users
     if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
-      workbox = new Workbox(scriptUrl);
+      workbox = new Workbox(props?.scriptUrl || 'service-worker.js');
       let registration: ServiceWorkerRegistration | undefined;
 
       updateCallback = () => {
@@ -37,7 +36,7 @@ export const useServiceWorker = (props?: Props): [boolean, () => void | null] =>
         if (registration && registration.waiting) {
           // Send a message to the waiting service worker,
           // instructing it to activate.
-          workbox.messageSW({ type: 'SKIP_WAITING' });
+          workbox.messageSkipWaiting();
         }
       };
 
@@ -50,8 +49,8 @@ export const useServiceWorker = (props?: Props): [boolean, () => void | null] =>
 
         // If a periodic update interval is set we manually check for service worker updates in this intervall
         // (otherwise only the browser would check for updates e.g. on page navigations)
-        if (registration && periodicUpdateInterval) {
-          periodicUpdateHandler = setInterval(() => registration?.update(), periodicUpdateInterval);
+        if (registration && props?.periodicUpdateInterval) {
+          periodicUpdateHandler = setInterval(() => registration?.update(), props.periodicUpdateInterval);
         }
       });
     }
