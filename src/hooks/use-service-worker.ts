@@ -5,7 +5,9 @@ let workbox: Workbox | null = null;
 let updateCallback: () => void = () => window.location.reload();
 
 type Props = {
+  /** Url to the service-worker script (Default: '/service-worker.js') */
   scriptUrl?: string;
+  /** Intervall in ms after which an update check for a new service worker on the server is enforced */
   periodicUpdateInterval?: number;
 };
 
@@ -17,7 +19,7 @@ export const useServiceWorker = (props?: Props): [boolean, () => void | null] =>
 
     // Inspired by https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users
     if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
-      workbox = new Workbox(props?.scriptUrl || 'service-worker.js');
+      workbox = new Workbox(props?.scriptUrl ?? '/service-worker.js');
       let registration: ServiceWorkerRegistration | undefined;
 
       updateCallback = () => {
