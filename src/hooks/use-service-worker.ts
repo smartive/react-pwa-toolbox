@@ -19,7 +19,7 @@ export const useServiceWorker = (props?: Props): [boolean, () => void | null] =>
 
     // Inspired by https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users
     if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
-      workbox = new Workbox(props?.scriptUrl || '/service-worker.js');
+      workbox = new Workbox(props?.scriptUrl ?? '/service-worker.js');
       let registration: ServiceWorkerRegistration | undefined;
 
       updateCallback = () => {
