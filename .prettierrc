@@ -1,5 +1,1 @@
-singleQuote: true
-printWidth: 125
-trailingComma: 'all'
-arrowParens: 'always'
-jsxBracketSameLine: true
+"@smartive/prettier-config"

@@ -10,9 +10,8 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "lint": "npm-run-all lint:*",
-    "lint:ts": "eslint './src/**/*.{ts,tsx}'",
-    "lint:prettier": "prettier --list-different \"src/**/*.ts{,x}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "npm run lint"
   },
   "repository": {
@@ -43,19 +42,12 @@
     "npm": "^8"
   },
   "devDependencies": {
+    "@smartive/eslint-config": "^3.1.0",
+    "@smartive/prettier-config": "^3.0.0",
     "@types/node": "^12.12.20",
     "@types/react": "^18.0.21",
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
-    "@typescript-eslint/parser": "^2.6.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
+    "eslint": "^8.25.0",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "typescript": "^3.7.3"
   }
