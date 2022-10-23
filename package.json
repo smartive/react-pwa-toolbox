@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/smartive/react-pwa-toolbox#readme",
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^2.0.0",
     "workbox-window": "^6.1.1"
   },
   "peerDependencies": {
