@@ -5,6 +5,7 @@
     ":automergeDisabled",
     ":automergeMinor",
     ":preserveSemverRanges",
+    ":widenPeerDependencies",
     ":maintainLockFilesWeekly"
   ]
 }
