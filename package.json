@@ -32,7 +32,7 @@
   "homepage": "https://github.com/smartive/react-pwa-toolbox#readme",
   "dependencies": {
     "tslib": "^2.0.0",
-    "workbox-window": "^6.1.1"
+    "workbox-window": "^7.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
