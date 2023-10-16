@@ -42,7 +42,7 @@
     "npm": "^8.0.0 || ^9.0.0"
   },
   "devDependencies": {
-    "@smartive/eslint-config": "^3.1.0",
+    "@smartive/eslint-config": "^4.0.0",
     "@smartive/prettier-config": "^3.0.0",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.21",
