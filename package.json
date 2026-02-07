@@ -46,7 +46,7 @@
     "@smartive/prettier-config": "^3.0.0",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.21",
-    "eslint": "^8.25.0",
+    "eslint": "^10.0.0",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "typescript": "^4.0.0"
